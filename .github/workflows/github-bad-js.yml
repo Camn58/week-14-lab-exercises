@@ -1,5 +1,5 @@
 name: GitHub Detect Bad JS
-run-name: ${{ github.actor }} first test :) please like and subscribe for more test!!!!
+run-name: ${{ github.actor }} third test :) please like and subscribe for more test!!!! sorry i lied and made two first tests. wont happen again
 on: [push]
 jobs:
   Explore-GitHub-Actions:
@@ -9,6 +9,9 @@ jobs:
       - uses: actions/checkout@v3
       - name: Audit packages
         working-directory: mashup
-        run: npm run lint
         env:
           CI: true
+        run: |
+        npm install
+        npm run lint
+
