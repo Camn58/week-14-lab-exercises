@@ -7,8 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: cd ./insecure
       - name: Audit packages
+        working-directory: insecure
         run: npm audit --audit-level moderate
         env:
           CI: true
