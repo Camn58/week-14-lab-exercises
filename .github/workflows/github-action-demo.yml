@@ -1,0 +1,13 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    name: Checkout latest code
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Audit packages
+        run: npm audit --audit-level moderate
+        env:
+          CI: true
