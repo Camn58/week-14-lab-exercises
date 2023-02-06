@@ -1,0 +1,14 @@
+name: GitHub Detect Bad JS
+run-name: ${{ github.actor }} first test :) please like and subscribe for more test!!!!
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    name: Checkout latest code
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Audit packages
+        working-directory: mashup
+        run: npm audit --audit-level moderate
+        env:
+          CI: true
