@@ -1,7 +1,7 @@
 const a = "b";
 console.log("Hello this is mashup js" + a);
 
-const myStatement = false;
+const myStatement = Boolean;
 
 if (myStatement = false)
 
